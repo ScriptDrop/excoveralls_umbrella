@@ -1,3 +1,36 @@
+This branch is a modified version that includes code in `subapp0` that is only called by tests in `subapp1`.
+
+Resulting output:
+```
+==> subapp0
+.
+
+Finished in 0.02 seconds
+1 test, 0 failures
+
+Randomized with seed 876905
+==> subapp1
+..
+
+Finished in 0.01 seconds
+2 tests, 0 failures
+
+Randomized with seed 876905
+----------------
+COV    FILE                                        LINES RELEVANT   MISSED
+ 50.0% apps/subapp0/lib/subapp0.ex                     9        2        1
+ 50.0% apps/subapp1/lib/subapp1.ex                     9        2        1
+[TOTAL]  50.0%
+----------------
+```
+
+The coverage of `Subapp0.plus/2` is not counted.
+
+
+
+---
+Original README:
+
 ExcoverallsUmbrella [![Build Status](https://secure.travis-ci.org/parroty/excoveralls_umbrella.png?branch=master "Build Status")](http://travis-ci.org/parroty/excoveralls_umbrella) [![Coverage Status](https://coveralls.io/repos/parroty/excoveralls_umbrella/badge.png?branch=master)](https://coveralls.io/r/parroty/excoveralls_umbrella?branch=master)
 ============
 
